@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/styless.css}">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <title>Cooperativa</title>
+</head>
+<body>
+    <header class="contheader" id="contenca">
+        <div class="titulologo">
+            <h1 class="titulop">Título</h1>
+            <div class="logo"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="lista"><a th:href="@{cliente}">Consulta Clientes</a></li>
+                <li class="lista"><a th:href="@{cliente/nuevo}">Registro Clientes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="">linkinterno1</a>
+    <a href="">linkinterno2</a>
+    <a href="">linkinterno3</a>
+    <a href="">linkinterno4</a>
+
+    <div sec:authorize="!isAuthenticated()">
+        <a th:href="@{/oauth2/authorization/auth0}">Log In</a>
+    </div>
+
+    <main class="main">
+        <section class="secuno">
+            <article class="art1" id="artt1">
+                <h2>Subtitulo1</h2>
+                <img src="" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aperiam labore architecto exercitationem hic officia facere temporibus quae. Sunt nam ratione deserunt, totam possimus autem amet ea. Iusto, asperiores voluptate.Z</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, fuga. Voluptatem minus animi voluptatum excepturi qui dolor possimus facere maxime commodi similique. Unde nisi nam fugiat ratione consequatur illo ipsum.</p>
+            </article>
+            <article class="art1" id="artt2">
+                <h2>Subtitulo2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, veniam. Ratione, officia? Vel cum, optio harum assumenda deserunt atque eligendi delectus quasi dolorum impedit provident explicabo doloribus officiis, sint veniam?</p>
+            </article>
+            <article class="art1" id="artt3">
+                <h2>Subtitulo3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, veniam. Ratione, officia? Vel cum, optio harum assumenda deserunt atque eligendi delectus quasi dolorum impedit provident explicabo doloribus officiis, sint veniam?</p>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
